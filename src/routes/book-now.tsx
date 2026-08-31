@@ -10,9 +10,6 @@ const title = `Get a Free Detailing Quote in ${business.city}, NC | ${business.n
 const description = `Request a free auto detailing or ceramic coating quote in ${business.areaLine}. Tell us your vehicle and service, and the owner replies within 2 business hours.`;
 
 export const Route = createFileRoute("/book-now")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    tier: typeof search.tier === "string" ? search.tier : undefined,
-  }),
   head: () => ({
     meta: [
       { title },
@@ -28,7 +25,6 @@ export const Route = createFileRoute("/book-now")({
 });
 
 function BookNow() {
-  const { tier } = Route.useSearch();
   const featured = testimonials[0];
 
   return (
@@ -44,7 +40,7 @@ function BookNow() {
 
       <Section
         eyebrow="Request"
-        title={tier ? `Quote request — System X ${tier}` : "Tell Us About Your Vehicle"}
+        title="Tell Us About Your Vehicle"
         intro="This is a quote request, not a confirmed appointment. We'll reply with pricing and available times."
       >
         <div className="grid items-start gap-10 lg:grid-cols-[1.5fr_1fr]">

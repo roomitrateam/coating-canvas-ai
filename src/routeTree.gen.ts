@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AddOnsRouteImport } from './routes/add-ons'
+import { Route as AutomotiveDetailingRouteImport } from './routes/automotive-detailing'
+import { Route as BookNowRouteImport } from './routes/book-now'
+import { Route as CeramicCoatingRouteImport } from './routes/ceramic-coating'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as PaintCorrectionRouteImport } from './routes/paint-correction'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PackagesExclusiveRouteImport } from './routes/packages.exclusive'
+import { Route as PackagesExteriorRouteImport } from './routes/packages.exterior'
+import { Route as PackagesInteriorRouteImport } from './routes/packages.interior'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AddOnsRoute = AddOnsRouteImport.update({
+  id: '/add-ons',
+  path: '/add-ons',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AutomotiveDetailingRoute = AutomotiveDetailingRouteImport.update({
+  id: '/automotive-detailing',
+  path: '/automotive-detailing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookNowRoute = BookNowRouteImport.update({
+  id: '/book-now',
+  path: '/book-now',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CeramicCoatingRoute = CeramicCoatingRouteImport.update({
+  id: '/ceramic-coating',
+  path: '/ceramic-coating',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaintCorrectionRoute = PaintCorrectionRouteImport.update({
+  id: '/paint-correction',
+  path: '/paint-correction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesExclusiveRoute = PackagesExclusiveRouteImport.update({
+  id: '/packages/exclusive',
+  path: '/packages/exclusive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesExteriorRoute = PackagesExteriorRouteImport.update({
+  id: '/packages/exterior',
+  path: '/packages/exterior',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesInteriorRoute = PackagesInteriorRouteImport.update({
+  id: '/packages/interior',
+  path: '/packages/interior',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/add-ons': typeof AddOnsRoute
+  '/automotive-detailing': typeof AutomotiveDetailingRoute
+  '/book-now': typeof BookNowRoute
+  '/ceramic-coating': typeof CeramicCoatingRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/paint-correction': typeof PaintCorrectionRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/packages/exclusive': typeof PackagesExclusiveRoute
+  '/packages/exterior': typeof PackagesExteriorRoute
+  '/packages/interior': typeof PackagesInteriorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/add-ons': typeof AddOnsRoute
+  '/automotive-detailing': typeof AutomotiveDetailingRoute
+  '/book-now': typeof BookNowRoute
+  '/ceramic-coating': typeof CeramicCoatingRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/paint-correction': typeof PaintCorrectionRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/packages/exclusive': typeof PackagesExclusiveRoute
+  '/packages/exterior': typeof PackagesExteriorRoute
+  '/packages/interior': typeof PackagesInteriorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/add-ons': typeof AddOnsRoute
+  '/automotive-detailing': typeof AutomotiveDetailingRoute
+  '/book-now': typeof BookNowRoute
+  '/ceramic-coating': typeof CeramicCoatingRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/paint-correction': typeof PaintCorrectionRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/packages/exclusive': typeof PackagesExclusiveRoute
+  '/packages/exterior': typeof PackagesExteriorRoute
+  '/packages/interior': typeof PackagesInteriorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/add-ons'
+    | '/automotive-detailing'
+    | '/book-now'
+    | '/ceramic-coating'
+    | '/contact'
+    | '/gallery'
+    | '/paint-correction'
+    | '/privacy-policy'
+    | '/packages/exclusive'
+    | '/packages/exterior'
+    | '/packages/interior'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/add-ons'
+    | '/automotive-detailing'
+    | '/book-now'
+    | '/ceramic-coating'
+    | '/contact'
+    | '/gallery'
+    | '/paint-correction'
+    | '/privacy-policy'
+    | '/packages/exclusive'
+    | '/packages/exterior'
+    | '/packages/interior'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/add-ons'
+    | '/automotive-detailing'
+    | '/book-now'
+    | '/ceramic-coating'
+    | '/contact'
+    | '/gallery'
+    | '/paint-correction'
+    | '/privacy-policy'
+    | '/packages/exclusive'
+    | '/packages/exterior'
+    | '/packages/interior'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AddOnsRoute: typeof AddOnsRoute
+  AutomotiveDetailingRoute: typeof AutomotiveDetailingRoute
+  BookNowRoute: typeof BookNowRoute
+  CeramicCoatingRoute: typeof CeramicCoatingRoute
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  PaintCorrectionRoute: typeof PaintCorrectionRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  PackagesExclusiveRoute: typeof PackagesExclusiveRoute
+  PackagesExteriorRoute: typeof PackagesExteriorRoute
+  PackagesInteriorRoute: typeof PackagesInteriorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/add-ons': {
+      id: '/add-ons'
+      path: '/add-ons'
+      fullPath: '/add-ons'
+      preLoaderRoute: typeof AddOnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/automotive-detailing': {
+      id: '/automotive-detailing'
+      path: '/automotive-detailing'
+      fullPath: '/automotive-detailing'
+      preLoaderRoute: typeof AutomotiveDetailingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-now': {
+      id: '/book-now'
+      path: '/book-now'
+      fullPath: '/book-now'
+      preLoaderRoute: typeof BookNowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ceramic-coating': {
+      id: '/ceramic-coating'
+      path: '/ceramic-coating'
+      fullPath: '/ceramic-coating'
+      preLoaderRoute: typeof CeramicCoatingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paint-correction': {
+      id: '/paint-correction'
+      path: '/paint-correction'
+      fullPath: '/paint-correction'
+      preLoaderRoute: typeof PaintCorrectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages/exclusive': {
+      id: '/packages/exclusive'
+      path: '/packages/exclusive'
+      fullPath: '/packages/exclusive'
+      preLoaderRoute: typeof PackagesExclusiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages/exterior': {
+      id: '/packages/exterior'
+      path: '/packages/exterior'
+      fullPath: '/packages/exterior'
+      preLoaderRoute: typeof PackagesExteriorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages/interior': {
+      id: '/packages/interior'
+      path: '/packages/interior'
+      fullPath: '/packages/interior'
+      preLoaderRoute: typeof PackagesInteriorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AddOnsRoute: AddOnsRoute,
+  AutomotiveDetailingRoute: AutomotiveDetailingRoute,
+  BookNowRoute: BookNowRoute,
+  CeramicCoatingRoute: CeramicCoatingRoute,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  PaintCorrectionRoute: PaintCorrectionRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  PackagesExclusiveRoute: PackagesExclusiveRoute,
+  PackagesExteriorRoute: PackagesExteriorRoute,
+  PackagesInteriorRoute: PackagesInteriorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

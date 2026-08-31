@@ -126,7 +126,7 @@ function CeramicCoating() {
                   </td>
                   <td className="px-5 py-5">
                     <Button asChild size="sm">
-                      <Link to="/book-now" search={{ tier: t.name }}>
+                      <Link to="/book-now">
                         Get a Quote for {t.name}
                       </Link>
                     </Button>
@@ -149,7 +149,7 @@ function CeramicCoating() {
                 ))}
               </ul>
               <Button asChild size="sm" className="mt-5 w-full">
-                <Link to="/book-now" search={{ tier: t.name }}>
+                <Link to="/book-now">
                   Get a Quote for {t.name}
                 </Link>
               </Button>

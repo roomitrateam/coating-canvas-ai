@@ -161,7 +161,7 @@ function Home() {
       >
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => {
-            const img = cardImages[s.title];
+            const img = cardImages[s.title]!;
             return (
               <article
                 key={s.title}
