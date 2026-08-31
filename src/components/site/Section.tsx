@@ -9,6 +9,7 @@ export function Section({
   children,
   tone = "base",
   className,
+  headingLevel = "h2",
 }: {
   id?: string;
   eyebrow?: string;
@@ -17,7 +18,9 @@ export function Section({
   children?: ReactNode;
   tone?: "base" | "surface";
   className?: string;
+  headingLevel?: "h1" | "h2";
 }) {
+  const Heading = headingLevel;
   return (
     <section
       id={id}
@@ -27,7 +30,7 @@ export function Section({
         {(eyebrow || title || intro) && (
           <div className="max-w-3xl">
             {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-            {title && <h2 className="mt-3 text-3xl sm:text-4xl">{title}</h2>}
+            {title && <Heading className="mt-3 text-3xl sm:text-4xl">{title}</Heading>}
             {intro && <p className="mt-4 text-muted-foreground">{intro}</p>}
           </div>
         )}

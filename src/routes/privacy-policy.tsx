@@ -22,7 +22,7 @@ export const Route = createFileRoute("/privacy-policy")({
 
 function PrivacyPolicy() {
   return (
-    <Section eyebrow="Legal" title="Privacy Policy">
+    <Section eyebrow="Legal" title="Privacy Policy" headingLevel="h1">
       <div className="max-w-3xl space-y-6 text-sm text-muted-foreground">
         <p>Last updated: [insert date].</p>
 
